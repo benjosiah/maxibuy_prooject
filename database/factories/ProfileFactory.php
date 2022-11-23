@@ -17,7 +17,8 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'full_name' => fake()->name(). " ". fake()->name(),
+            'dob' => fake()->date()
         ];
     }
 }
