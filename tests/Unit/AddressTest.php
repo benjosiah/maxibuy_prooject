@@ -25,14 +25,14 @@ class AddressTest extends TestCase
         ]), 1);
     }
 
-        /** @test */
-        public function a_address_belongs_to_a_user()
-        {
-            $user = User::factory()->create();
-            $address = Address::factory()->create(['user_id' => $user->id]); 
-    
-            $this->assertInstanceOf(User::class, $address->user);
-        }
+    /** @test */
+    public function a_address_belongs_to_a_user()
+    {
+        $user = User::factory()->create();
+        $address = Address::factory()->create(['user_id' => $user->id]); 
+
+        $this->assertInstanceOf(User::class, $address->user);
+    }
 
     
 }

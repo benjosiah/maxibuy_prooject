@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
+    use \Spiritix\LadaCache\Database\LadaCacheTrait;
 
     public function user(){
         return $this->belongsTo(User::class);
